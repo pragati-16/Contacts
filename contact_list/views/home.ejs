@@ -1,0 +1,33 @@
+<html>
+    <head>
+    <title>
+    <%=title %>
+    </title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/css/home.css"> 
+      </head>
+<body>
+    <div>
+<h1 id="page-heading"> <i class="fas fa-address-book"></i>MY CONTACTS LIST</h1>
+<div id="contacts-list-container">
+<% for(let i of contact_list) { %> 
+  <ul class="data">
+   
+       <%= i.name %>
+       <%= i.phone %>
+       <!-- <a href="/delete-contact/<%=i.phone %>">   here writing just phone after // below:query params -->  
+       <!--  <a href="/delete-contact/?phone=<%=i.phone %>&name=<%=i.name%>">   -->
+          <a href="/delete-contact/?id=<%=i._id %>&name=<%=i.name%>"> 
+   <i class="fas fa-window-close" style="margin-left:320px;"></i>
+       </a>
+      </ul> 
+<% } %>
+</div> 
+<form action="/add-contact" method="POST"> 
+ <input type="text" name="name" placeholder="Enter your name" required>
+ <input type="number" name="phone" placeholder="Enter your contact no" min="0" required>
+ <button type="submit">Add Contact</button> 
+</form>
+<script type="text/javascript" src="/js/home.js"> </script>
+</body> 
+</html>

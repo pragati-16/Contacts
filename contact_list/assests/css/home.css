@@ -1,0 +1,22 @@
+body 
+{
+    text-align:center;
+    font-family:sans-serif;
+    background-color:	FAFAD2;
+}
+#page-heading
+{
+    text-align:center;
+    margin-top:25px;
+    color:grey;
+}
+ul.data
+{
+ margin-right:600px; 
+ margin-left:600px;
+ background-color:pink;
+}
+ul.data:hover 
+{
+    background-color:cyan;
+}

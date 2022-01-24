@@ -1,0 +1,23 @@
+<html>
+<body>
+    <title>
+    <%=title %>
+    </title>
+<h1>WELCOME TO EJS 2Page </h1> 
+<ul>
+  <%  for(let i=1;i<=5;i++)  { %>
+   <li>
+   <%=i %>        
+</li> 
+    <% } %> 
+</ul> 
+    <% if(!true) { %>
+          <h1>Yeah! It's true.</h1>
+   <%  }
+    else { %>
+        <h2>Oops! It's false.</h2>               
+    <% } %>
+               
+</ul>
+</body> 
+</html>
